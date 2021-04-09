@@ -7,8 +7,25 @@ const questions = [
       {text: "numbers", correct: false},
       {text: "strings", correct: false},
     ]
-  }
+  },
+  { question: "A condition in an if/else statement is enclosed within:",
+    answers: [
+    {text:"parenthesis", correct: true},
+    {text: "points", correct: false},
+    {text: "dashes", correct: false},
+    {text: "brackets", correct: false},
+  ]
+  },
+  { question: "Arrays in JavaScript can be used to store:",
+    answers: [
+    {text:"All of the other options", correct: true},
+    {text: "Numbers", correct: false},
+    {text: "Strings", correct: false},
+    {text: "Booleans", correct: false},
+  ]
+  }  
 ]
+
 var startButton = document.getElementById("start-button");
 var nextButton = document.getElementById("next-button");
 var startHeader = document.getElementById('start-h');
@@ -43,9 +60,10 @@ function nextQuestion(){
 function resetState(){
   nextButton.classList.add("hide");
   while (answerOptions.firstChild){
-    answerOptions.removeChild(answerOptions.firstChild )
+    answerOptions.removeChild(answerOptions.firstChild)
+    // showAnswer.classList.add("hide");
+
   }
-  
 }
 function showQuestion(question){
   questionElement.innerText = question.question;
@@ -84,5 +102,5 @@ function selectAnswer(e){
     startButton.classList.remove("hide");
 
   }
-
 }
+
